@@ -1,0 +1,315 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.border.Border;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+
+class food implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="http://www.foodora.com/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class food1 implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="https://box8.in/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class food2 implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="https://order.faasos.io/?utm_source=mediaz&utm_medium=cps&utm_campaign=mediaz_535";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+
+
+class travel implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="http://www.makemytrip.com/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class travel1 implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="https://www.goibibo.com/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class travel2 implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="https://www.tripit.com/web";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class shop implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="https://www.myntra.com/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class shop1 implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="http://www.koovs.com/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+class shop2 implements ActionListener{
+    
+        public void actionPerformed(ActionEvent e){
+       
+        try{
+            String url="https://www.takealot.com/";
+            java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+        }
+        catch(java.io.IOException f){
+            System.out.println(f.getMessage());
+            
+        }
+    }
+}
+public class Javaproject1 extends JFrame implements ActionListener{
+    JMenuBar m1;
+   
+    JMenu x,y;
+    JMenuItem m2,m3;
+    JFrame jf;
+    JLabel l1,ll,l2,l3;
+    JTextField t1,t2;
+    JButton b0,b1,b2,b3,b4,b5;
+    ImageIcon i;
+    food f=new food();
+    food1 f1=new food1();
+    food2 f2=new food2(); 
+    travel t = new travel();
+    travel1 t11 = new travel1();
+    travel2 t22 = new travel2();
+    
+    shop s = new shop();
+    shop1 s1 = new shop1();
+    shop2 s2 = new shop2();
+
+    Javaproject1(){
+        jf=new JFrame("GOOPS");
+        jf.setSize(1000,300);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ ImageIcon=Toolkit.getDefaultToolkit().getImage("C:\\Users\\Admin\\Desktop\\JavaPro\\logo.png");
+        jf.setIconImage(icon);
+        jf.setLayout(null);
+        jf.setVisible(true);
+        jf.setLayout(new BorderLayout());
+        
+        m1=new JMenuBar();
+        x=new JMenu("File");
+        y=new JMenu("Options");
+        m2=new JMenuItem("New");
+        m3=new JMenuItem("Colors");
+        x.add(m2);
+        y.add(m3);
+        m1.add(x);
+        m1.add(y);
+       
+        ImageIcon i=new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\logo.png");
+        JLabel j=new JLabel("",i,SwingConstants.CENTER);
+        jf.add(j,BorderLayout.NORTH);
+        jf.setLayout(new BorderLayout());
+                 jf.setLayout(new FlowLayout());
+
+        l1=new JLabel("SEARCH",JLabel.CENTER);
+        l3=new JLabel("                                    Please press refresh button after each search                                   ");
+       
+        
+       Border bo=BorderFactory.createLineBorder(Color.BLACK);
+        l1.setBorder(bo);
+        l1.setPreferredSize(new Dimension(70,70));
+       l1.setHorizontalAlignment(JLabel.CENTER);
+        l1.setVerticalAlignment(JLabel.CENTER);        
+        l2= new JLabel("");
+        t1=new JTextField(20);
+        b1=new JButton("GO");
+       
+        b1.addActionListener(this);
+        ll= new JLabel("");
+        b0=new JButton("Refresh");
+        b0.addActionListener(this);
+        b5=new JButton("Try Again!!");
+        b5.addActionListener(this);
+        
+        jf.setJMenuBar(m1);
+       
+        jf.add(l1);
+        jf.add(t1);
+        jf.add(b1);
+        jf.add(b0);
+        jf.add(b5);
+        jf.add(l3);
+
+
+        
+        jf.setVisible(true);
+        
+    }
+     public void actionPerformed(ActionEvent e){
+        if(e.getActionCommand().equals("GO"))
+        {
+            switch(t1.getText().toLowerCase()){
+                
+                case "food":    b2=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\n1.jpg"));
+                                b2.addActionListener(f);
+                                jf.add(b2);
+                                
+                          
+                                b3=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\n2.png"));
+                    
+                                b3.addActionListener(f1);
+                                jf.add(b3);
+                                b4=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\n3.jpg"));
+                                b4.addActionListener(f2);
+                                jf.add(b4);
+                                jf.setVisible(true);
+                                break;
+                 
+                case "shop":
+                case "shopping":  b2=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\s1.jpg"));
+                                b2.addActionListener(s);
+                                b2.setBounds(10,10,10,10);
+                                jf.add(b2);
+                                b3=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\s2.jpg"));
+                                b3.addActionListener(s1);
+                                b3.setBounds(10,10,10,10);
+                                jf.add(b3);
+                                b4=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\s3.jpg"));
+                                b4.addActionListener(s2);
+                                b4.setBounds(10,10,10,10);
+                                jf.add(b4);
+                               jf.setVisible(true);
+                                break; 
+                    
+                case "travel":
+                case "transport":    b2=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\t1.jpg"));
+                                b2.addActionListener(t);
+                                jf.add(b2);
+                                b3=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\t2.png"));
+                                b3.addActionListener(t11);
+                                jf.add(b3);
+                                b4=new JButton(new ImageIcon("C:\\Users\\Admin\\Desktop\\JavaPro\\t3.png"));
+                                b4.addActionListener(t22);
+                                jf.add(b4);
+                               jf.setVisible(true);
+                                break;  
+             
+
+   default:         ll.setText("Press try again and please enter a valid text among food, shop and Travel ");
+                                jf.add(ll);
+                                jf.setVisible(true);
+                                 break;
+            }
+     }
+        if(e.getActionCommand().equals("Refresh")){
+           try{ 
+            b2.setVisible(false);
+           b3.setVisible(false);
+           b4.setVisible(false);
+           
+           }
+           catch(Exception a){
+               
+               l2.setText("Please Refresh only after searching for a category!!!");
+               jf.add(l2);
+               jf.setVisible(true);
+               
+           }
+        }
+        if(e.getActionCommand().equals("Try Again!!")){
+            ll.setVisible(false);
+            
+            jf.setVisible(true);
+            
+        }
+                
+        
+}
+  
+
+
+
+  public static void main(String[] args) {
+      
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        
+        SwingUtilities.invokeLater(new Runnable(){
+            public void run(){
+                //new Javaproject1();
+               
+                Javaproject1 jp=new Javaproject1();
+               jp.setOpacity(0.55f);
+                jp.setVisible(true);          
+            }
+        });
+    }
+}
