@@ -1,4 +1,2 @@
 # A-local-Service-Application
-## Create a local service application(giving the required app for the search) using Swing GUI in any Java IDLE.
-
-
+## Create a local service application(giving the required app for the search) using Swing GUI in any Java IDLE
